@@ -21,11 +21,12 @@ export class AppComponent {
   onFilterApplied(s, e) {
     this._filterRows = [];
     const view = this.source;
-    view.sourceCollection.forEach(item => {
-      if(view.filter && view.filter(item)) {
-        this._filterRows.push(item);
-      }
-    });
+    this._filterRows = this.source._view;
+    // view.sourceCollection.forEach(item => {
+    //   if(view.filter && view.filter(item)) {
+    //     this._filterRows.push(item);
+    //   }
+    // });
 
   }
 
