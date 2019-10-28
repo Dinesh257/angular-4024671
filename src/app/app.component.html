@@ -1,0 +1,9 @@
+<wj-flex-grid [itemsSource]="source">
+  <wj-flex-grid-filter #filter (filterApplied)="onFilterApplied(filter, $event)"></wj-flex-grid-filter>
+  <wj-flex-grid-column header="Country" binding="country"></wj-flex-grid-column>
+  <wj-flex-grid-column header="Date" binding="date"></wj-flex-grid-column>
+  <wj-flex-grid-column header="Amount" binding="amount"></wj-flex-grid-column>
+</wj-flex-grid><br><br>
+<wj-collection-view-navigator [cv]="source" [byPage]="true"></wj-collection-view-navigator>
+<br><br>
+<button (click)="onClick($event)">Filtered Rows</button>
